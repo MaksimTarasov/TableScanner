@@ -1,4 +1,6 @@
 venv
-/data/input/
-/data/output/
+/data/input/*.pdf
+/data/out_mini/*.jpg
+/data/out_mini/*.json
+
 
