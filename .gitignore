@@ -4,4 +4,10 @@ venv
 /data/out_mini/*.jpg
 /data/out_txt/*.json
 
+!/data/input/test.pdf
+!/data/input/test.jpg
+!/data/out_mini/test.pdf
+!/data/out_txt/test.jpg
+
+
 

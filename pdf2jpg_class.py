@@ -35,6 +35,4 @@ class Pdf2Jpg:
                     pix1.pil_save(file.replace('pdf', 'jpg'))
 
 
-if __name__ == '__main__':
-    p2j = Pdf2Jpg('data/input/')
-    p2j.convert()
+

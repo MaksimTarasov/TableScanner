@@ -8,5 +8,8 @@ from imutils import contours
 from typing import List
 import os
 import easyocr
+from pdf2jpg_class import Pdf2Jpg
 
-
+if __name__ == '__main__':
+    p2j = Pdf2Jpg('data/input/')
+    p2j.convert()
