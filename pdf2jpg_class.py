@@ -1,7 +1,6 @@
-import fitz
 import os
 from typing import List
-
+import fitz
 
 class Pdf2Jpg:
     """
@@ -14,6 +13,12 @@ class Pdf2Jpg:
 
     # Получает на вход путь и тип файла, по умолчанию pdf
     def __get_files(self, filepath: str, typeoffile='pdf') -> List:
+        """
+
+        :param filepath:
+        :param typeoffile:
+        :return:
+        """
         file_list = []
         try:
             file_list = [i for i in os.listdir(filepath) if i.endswith(typeoffile)]
@@ -22,6 +27,11 @@ class Pdf2Jpg:
         return file_list
 
     def convert(self, typeoffile='pdf'):
+        """
+
+        :param typeoffile:
+        :return:
+        """
         file_list = self.__get_files(self._filepath, typeoffile)
         if file_list:
             for file in file_list:
@@ -33,6 +43,3 @@ class Pdf2Jpg:
                     pix = fitz.Pixmap(doc, p[0][0])
                     pix1 = fitz.Pixmap(fitz.csRGB, pix)
                     pix1.pil_save(file.replace('pdf', 'jpg'))
-
-
-
