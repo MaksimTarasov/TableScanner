@@ -9,7 +9,10 @@ from typing import List
 import os
 import easyocr
 from pdf2jpg_class import Pdf2Jpg
+from get_text_area import GetTextArea
 
 if __name__ == '__main__':
-    p2j = Pdf2Jpg('data/input/')
-    p2j.convert()
+    # p2j = Pdf2Jpg('data/input/')
+    # p2j.convert()
+    ld = GetTextArea()
+    ds = ld._load_img_new('data/')
